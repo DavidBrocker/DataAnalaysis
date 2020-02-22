@@ -1,0 +1,190 @@
+Tests Output
+
+
+
+act-char-ttest
+
+	Paired t-test
+
+data:  Char.avg and Act.avg
+t = 7.3476, df = 82, p-value = 1.348e-10
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.8930316 1.5561250
+sample estimates:
+mean of the differences 
+               1.224578 
+
+
+
+
+
+one-sample-char
+
+	One Sample t-test
+
+data:  Char.avg
+t = 3.5993, df = 82, p-value = 0.0005448
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.213788 4.742116
+sample estimates:
+mean of x 
+ 4.477952 
+
+one-sample-act
+
+	One Sample t-test
+
+data:  Char.avg
+t = 3.5993, df = 82, p-value = 0.0005448
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.213788 4.742116
+sample estimates:
+mean of x 
+ 4.477952 
+
+paired-emotion-faces
+
+	Paired t-test
+
+data:  Faces$ANFace and Faces$DGFace
+t = -4.1997, df = 82, p-value = 6.749e-05
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.4857178 -0.8877761
+sample estimates:
+mean of the differences 
+              -1.686747 
+
+disgust-one-sample
+
+	One Sample t-test
+
+data:  Faces$DGFace
+t = 4.6434, df = 82, p-value = 1.288e-05
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.592241 5.480048
+sample estimates:
+mean of x 
+ 5.036145 
+
+anger-one-sample
+
+	One Sample t-test
+
+data:  Faces$ANFace
+t = -2.7648, df = 82, p-value = 0.007033
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 2.881282 3.817513
+sample estimates:
+mean of x 
+ 3.349398 
+
+change-own-ways-ttest
+
+	One Sample t-test
+
+data:  Change_Own_Avg
+t = -1.9282, df = 82, p-value = 0.05729
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.485954 4.008022
+sample estimates:
+mean of x 
+ 3.746988 
+
+change-under-pressure-ttest
+
+	One Sample t-test
+
+data:  change_under_avg
+t = -6.1311, df = 82, p-value = 2.919e-08
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 2.739365 3.357020
+sample estimates:
+mean of x 
+ 3.048193 
+
+reform-ttest
+
+	One Sample t-test
+
+data:  Reform.avg
+t = -3.7927, df = 82, p-value = 0.0002839
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.118355 3.725018
+sample estimates:
+mean of x 
+ 3.421687 
+
+Confrontation-tests
+
+	One Sample t-test
+
+data:  Confront.avg
+t = -0.055136, df = 82, p-value = 0.9562
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.553249 4.422654
+sample estimates:
+mean of x 
+ 3.987952 
+
+Social-disapproval-tests
+
+	One Sample t-test
+
+data:  Social_Dis.avg
+t = 1.9934, df = 82, p-value = 0.04954
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.000771 4.746217
+sample estimates:
+mean of x 
+ 4.373494 
+
+Personally-Avoid-tests
+
+	One Sample t-test
+
+data:  Personally_Avoid.avg
+t = 2.3782, df = 82, p-value = 0.01972
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.076842 4.862917
+sample estimates:
+mean of x 
+  4.46988 
+
+Dependent-Betas-char
+Linear hypothesis test
+
+Hypothesis:
+ANFace - DGFace = 0
+
+Model 1: restricted model
+Model 2: Char.avg ~ ANFace + DGFace
+
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+1     81 109.32                              
+2     80 103.84  1    5.4806 4.2224 0.04316 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Dependent-Betas-act
+Linear hypothesis test
+
+Hypothesis:
+ANFace - DGFace = 0
+
+Model 1: restricted model
+Model 2: Act.avg ~ ANFace + DGFace
+
+  Res.Df    RSS Df Sum of Sq      F Pr(>F)
+1     81 178.46                           
+2     80 176.24  1    2.2224 1.0088 0.3182

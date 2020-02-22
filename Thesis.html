@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Thesis.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Data</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Raw Analysis</a>
+</li>
+<li>
+  <a href="Analyze.html">Reportings</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="data-is-organized-so-that-higher-numbers-indicate-feelings-towards-robertracist-and-lower-numbers-indicate-feelings-towards-johnviolent" class="section level5">
+<h5><em>Data is organized so that higher numbers indicate feelings towards ROBERT(RACIST) and lower numbers indicate feelings towards JOHN(VIOLENT)</em></h5>
+</div>
+<div id="calculate-cronbachs-alpha-on-the-items" class="section level5">
+<h5><em>Calculate Cronbach’s Alpha on the items</em></h5>
+<p><span class="math inline">\(\alpha_{Faces} =\)</span> 0.7822103</p>
+<p><span class="math inline">\(\alpha_{Words} =\)</span> 0.8955582</p>
+</div>
+<div id="paired-samples-t-test-comparing-act-and-character-ratings-two-tailed" class="section level5">
+<h5><em>Paired samples t-test comparing act and character ratings (two-tailed)</em></h5>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre><code>
+    Paired t-test
+
+data:  Char.avg and Act.avg
+t = 7.3476, df = 82, p-value = 1.348e-10
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.8930316 1.5561250
+sample estimates:
+mean of the differences 
+               1.224578 </code></pre>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-6-1.png" width="672" /><img src="Thesis_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+</div>
+<div id="one-sample-t-tests-comparing-act-and-character-ratings-to-4-midpoint-of-scale-two-tailed" class="section level5">
+<h5><em>One-sample t-tests comparing act and character ratings to 4 (midpoint of scale) (two-tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Char.avg
+t = 3.5993, df = 82, p-value = 0.0005448
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.213788 4.742116
+sample estimates:
+mean of x 
+ 4.477952 </code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  Act.avg
+t = -4.281, df = 82, p-value = 5.017e-05
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 2.906427 3.600320
+sample estimates:
+mean of x 
+ 3.253373 </code></pre>
+</div>
+<div id="disgust-word-items-will-be-averaged-together-and-anger-word-items-will-be-averaged-together.-we-will-compute-the-correlation-between-disgust-and-anger-for-the-word-items-and-for-the-face-items.-items-with-disgust-anger-correlations-greater-than-r-0.70-will-not-be-analyzed.-if-both-word-and-face-items-are-r-0.70-both-will-be-used-standardized-and-averaged." class="section level5">
+<h5><em>Disgust word items will be averaged together and anger word items will be averaged together. We will compute the correlation between disgust and anger for the word items and for the face items. Items with disgust-anger correlations greater than r = 0.70 will not be analyzed. If both word and face items are r &lt; 0.70, both will be used, standardized and averaged.</em></h5>
+<pre><code>[1] 0.8111507</code></pre>
+<pre><code>[1] -0.5345868</code></pre>
+</div>
+<div id="paired-samples-t-test-comparing-disgust-and-anger-ratings-two-tailed" class="section level5">
+<h5><em>Paired samples t-test comparing disgust and anger ratings (two-tailed)</em></h5>
+<pre><code>
+    Paired t-test
+
+data:  Faces$ANFace and Faces$DGFace
+t = -4.1997, df = 82, p-value = 6.749e-05
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.4857178 -0.8877761
+sample estimates:
+mean of the differences 
+              -1.686747 </code></pre>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="one-sample-t-tests-comparing-disgust-and-anger-ratings-to-4-midpoint-of-scale-two-tailed" class="section level5">
+<h5><em>One-sample t-tests comparing disgust and anger ratings to 4 (midpoint of scale) (two-tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Faces$DGFace
+t = 4.6434, df = 82, p-value = 1.288e-05
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.592241 5.480048
+sample estimates:
+mean of x 
+ 5.036145 </code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  Faces$ANFace
+t = -2.7648, df = 82, p-value = 0.007033
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 2.881282 3.817513
+sample estimates:
+mean of x 
+ 3.349398 </code></pre>
+</div>
+<div id="chi-squared-test-to-compare-how-many-participants-chose-disgust-for-racist-vs.violence" class="section level5">
+<h5><em>Chi-squared test to compare how many participants chose disgust for Racist vs. Violence</em></h5>
+</div>
+<div id="anger" class="section level5">
+<h5><em>1 = Anger</em></h5>
+</div>
+<div id="disgust" class="section level5">
+<h5><em>2 = Disgust</em></h5>
+<pre><code>
+    Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+
+data:  Forced_Choice$FacesForcedChoiceVio and Forced_Choice$FacesForcedChoiceRac
+X-squared = 21.157, df = 1, p-value = 4.232e-06</code></pre>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="Thesis_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+</div>
+<div id="character-future-consequences" class="section level5">
+<h5><strong>Character, future consequences</strong></h5>
+</div>
+<div id="hypothesis-violent-person-should-be-rated-as-less-likely-to-behave-inappropriatelymore-likely-to-change-their-ways-going-forward" class="section level5">
+<h5><em>Hypothesis: Violent person should be rated as less likely to behave inappropriately/more likely to change their ways going forward</em></h5>
+</div>
+<div id="analysis-items-will-be-averaged-together" class="section level5">
+<h5><em>Analysis: Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale-two-tailed" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale) (two tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Change_Own_Avg
+t = -1.9282, df = 82, p-value = 0.05729
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.485954 4.008022
+sample estimates:
+mean of x 
+ 3.746988 </code></pre>
+</div>
+<div id="items-will-be-averaged-together" class="section level5">
+<h5><em>Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  change_under_avg
+t = -6.1311, df = 82, p-value = 2.919e-08
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 2.739365 3.357020
+sample estimates:
+mean of x 
+ 3.048193 </code></pre>
+</div>
+<div id="reform" class="section level5">
+<h5><strong>Reform</strong></h5>
+</div>
+<div id="hypothesis-reform-ratings-should-be-higher-for-violent-vs.racist" class="section level5">
+<h5><em>Hypothesis: Reform ratings should be higher for violent vs. racist</em></h5>
+</div>
+<div id="items-will-be-averaged-together-1" class="section level5">
+<h5><em>Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale-two-tailed-1" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale) (two tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Reform.avg
+t = -3.7927, df = 82, p-value = 0.0002839
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.118355 3.725018
+sample estimates:
+mean of x 
+ 3.421687 </code></pre>
+</div>
+<div id="confront" class="section level5">
+<h5><strong>Confront</strong></h5>
+</div>
+<div id="hypothesis-according-to-hypothesis-that-anger-approach-and-disgust-avoidance-confrontation-should-be-higher-for-violent-vs.racist-since-we-predict-higher-anger-for-violent-vs.racist." class="section level5">
+<h5><em>Hypothesis: According to hypothesis that anger = approach and disgust = avoidance, confrontation should be higher for violent vs. racist, since we predict higher anger for violent vs. racist.</em></h5>
+</div>
+<div id="analysis-items-will-be-averaged-together-1" class="section level5">
+<h5><em>Analysis: Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale-two-tailed-2" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale) (two tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Confront.avg
+t = -0.055136, df = 82, p-value = 0.9562
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 3.553249 4.422654
+sample estimates:
+mean of x 
+ 3.987952 </code></pre>
+</div>
+<div id="promoting-social-disapproval" class="section level5">
+<h5><strong>Promoting social disapproval</strong></h5>
+</div>
+<div id="hypothesis-should-be-higher-for-racist-vs.violent" class="section level5">
+<h5><em>Hypothesis: Should be higher for racist vs. violent</em></h5>
+</div>
+<div id="analysis-items-will-be-averaged-together-2" class="section level5">
+<h5><em>Analysis: Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale-two-tailed-3" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale) (two tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Social_Dis.avg
+t = 1.9934, df = 82, p-value = 0.04954
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.000771 4.746217
+sample estimates:
+mean of x 
+ 4.373494 </code></pre>
+</div>
+<div id="personally-avoid" class="section level5">
+<h5><strong>Personally avoid</strong></h5>
+</div>
+<div id="hypothesis-should-be-higher-for-racist-vs.violent-1" class="section level5">
+<h5><em>Hypothesis: Should be higher for racist vs. violent</em></h5>
+</div>
+<div id="analysis-items-will-be-averaged-together-3" class="section level5">
+<h5><em>Analysis: Items will be averaged together</em></h5>
+</div>
+<div id="one-sample-t-test-comparing-average-rating-to-4-midpoint-of-scale-two-tailed-4" class="section level5">
+<h5><em>One-sample t-test comparing average rating to 4 (midpoint of scale) (two tailed)</em></h5>
+<pre><code>
+    One Sample t-test
+
+data:  Personally_Avoid.avg
+t = 2.3782, df = 82, p-value = 0.01972
+alternative hypothesis: true mean is not equal to 4
+95 percent confidence interval:
+ 4.076842 4.862917
+sample estimates:
+mean of x 
+  4.46988 </code></pre>
+</div>
+<div id="disgust-and-character" class="section level5">
+<h5><strong>Disgust and character:</strong></h5>
+</div>
+<div id="hypothesis-character-ratings-should-be-correlated-with-disgust-ratings-to-a-greater-extent-than-anger-ratings" class="section level5">
+<h5><em>Hypothesis: Character ratings should be correlated with disgust ratings to a greater extent than anger ratings</em></h5>
+</div>
+<div id="analysis-multiple-regression-with-disgust-and-anger-ratings-as-simultaneous-ivs-and-character-as-the-dv.-then-test-for-difference-between-two-dependent-betas." class="section level5">
+<h5><em>Analysis: Multiple regression with disgust and anger ratings as simultaneous IVs and character as the DV. Then test for difference between two dependent betas.</em></h5>
+<pre><code>
+Call:
+lm(formula = Char.avg ~ ANFace + DGFace, data = Faces)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6732 -0.9046 -0.1575  0.8204  2.7136 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  2.78971    0.54540   5.115  2.1e-06 ***
+ANFace       0.11629    0.06944   1.675 0.097904 .  
+DGFace       0.25788    0.07323   3.522 0.000712 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.139 on 80 degrees of freedom
+Multiple R-squared:  0.1348,    Adjusted R-squared:  0.1131 
+F-statistic: 6.231 on 2 and 80 DF,  p-value: 0.003056</code></pre>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-24-1.png" width="672" /><img src="Thesis_files/figure-html/unnamed-chunk-24-2.png" width="672" /><img src="Thesis_files/figure-html/unnamed-chunk-24-3.png" width="672" /><img src="Thesis_files/figure-html/unnamed-chunk-24-4.png" width="672" /></p>
+</div>
+<div id="anger-and-act" class="section level5">
+<h5><strong>Anger and act:</strong></h5>
+</div>
+<div id="hypothesis-act-ratings-will-be-correlated-with-anger-ratings-to-the-same-extent-as-disgust-ratings" class="section level5">
+<h5><em>Hypothesis: Act ratings will be correlated with anger ratings to the same extent as disgust ratings</em></h5>
+</div>
+<div id="analysis-multiple-regression-with-disgust-and-anger-ratings-as-simultaneous-ivs-and-act-as-the-dv.-then-test-for-difference-between-two-dependent-betas." class="section level5">
+<h5><em>Analysis: Multiple regression with disgust and anger ratings as simultaneous IVs and act as the DV. Then test for difference</em> between two dependent betas.</h5>
+<pre><code>
+Call:
+lm(formula = Act.avg ~ ANFace + DGFace, data = Faces)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.8486 -0.9660 -0.2765  0.8638  4.2079 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  0.68114    0.71054   0.959 0.340634    
+ANFace       0.25260    0.09047   2.792 0.006548 ** 
+DGFace       0.34276    0.09540   3.593 0.000563 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.484 on 80 degrees of freedom
+Multiple R-squared:  0.1487,    Adjusted R-squared:  0.1274 
+F-statistic: 6.986 on 2 and 80 DF,  p-value: 0.001599</code></pre>
+</div>
+<div id="hypothesis-rejectionavoidance-tendencies-will-be-correlated-with-disgust-ratings-to-a-greater-extent-than-anger-ratings" class="section level5">
+<h5><em>Hypothesis: Rejection/avoidance tendencies will be correlated with disgust ratings to a greater extent than anger ratings</em></h5>
+</div>
+<div id="analysis-personally-avoid-and-promote-social-disapprovalratings-will-be-averaged-together-to-form-a-rejectionavoidance-index" class="section level5">
+<h5><em>Analysis: Personally avoid and promote social disapprovalratings will be averaged together to form a rejection/avoidance index</em></h5>
+</div>
+<div id="multiple-regression-with-disgust-and-anger-ratings-as-simultaneous-ivs-and-rejectionavoidance-as-the-dv.-then-test-for-difference-between-two-dependent-betas." class="section level5">
+<h5><em>Multiple regression with disgust and anger ratings as simultaneous IVs and rejection/avoidance as the DV. Then test for difference between two dependent betas.</em></h5>
+<pre><code>
+Call:
+lm(formula = reject_avoid.avg ~ ANFace + DGFace, data = Faces)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.4009 -0.8444  0.1506  0.8321  3.1656 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  1.74265    0.69688   2.501   0.0144 *  
+ANFace       0.17840    0.08873   2.011   0.0477 *  
+DGFace       0.41331    0.09357   4.417  3.1e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.456 on 80 degrees of freedom
+Multiple R-squared:  0.1975,    Adjusted R-squared:  0.1774 
+F-statistic: 9.842 on 2 and 80 DF,  p-value: 0.0001509</code></pre>
+</div>
+<div id="hypothesis-confrontation-tendencies-will-be-correlated-with-anger-ratings-to-a-greater-extent-than-disgust-ratings" class="section level5">
+<h5><em>Hypothesis: Confrontation tendencies will be correlated with anger ratings to a greater extent than disgust ratings</em></h5>
+</div>
+<div id="analysis-multiple-regression-with-disgust-and-anger-ratings-as-simultaneous-ivs-and-confront-ratings-as-the-dv.-then-test-for-difference-between-two-dependent-betas." class="section level5">
+<h5><em>Analysis: Multiple regression with disgust and anger ratings as simultaneous IVs and confront ratings as the DV. Then test for difference between two dependent betas.</em></h5>
+<pre><code>
+Call:
+lm(formula = Confront.avg ~ ANFace + DGFace, data = Faces)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.3335 -1.5452 -0.0592  1.6665  4.6400 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)   
+(Intercept)   1.9033     0.9243   2.059  0.04273 * 
+ANFace        0.1279     0.1177   1.086  0.28054   
+DGFace        0.3289     0.1241   2.650  0.00969 **
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.931 on 80 degrees of freedom
+Multiple R-squared:  0.08232,   Adjusted R-squared:  0.05938 
+F-statistic: 3.588 on 2 and 80 DF,  p-value: 0.03218</code></pre>
+</div>
+<div id="hypothesis-reform-tendencies-will-be-correlated-with-anger-ratings-to-a-greater-extent-than-disgust-ratings-analysis-multiple-regression-with-disgust-and-anger-ratings-as-simultaneous-ivs-and-reform-ratings-as-the-dv.-then-test-for-difference-between-two-dependent-betas." class="section level5">
+<h5><em>Hypothesis: Reform tendencies will be correlated with anger ratings to a greater extent than disgust ratings ##### </em>Analysis: Multiple regression with disgust and anger ratings as simultaneous IVs and reform ratings as the DV. Then test for difference between two dependent betas.</h5>
+<pre><code>
+Call:
+lm(formula = Reform.avg ~ ANFace + DGFace, data = Faces)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.7900 -1.0735  0.2100  0.7641  3.7641 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  3.03246    0.66742   4.544 1.93e-05 ***
+ANFace       0.09235    0.08498   1.087     0.28    
+DGFace       0.01587    0.08961   0.177     0.86    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.394 on 80 degrees of freedom
+Multiple R-squared:  0.01731,   Adjusted R-squared:  -0.007256 
+F-statistic: 0.7046 on 2 and 80 DF,  p-value: 0.4973</code></pre>
+<pre><code>Linear hypothesis test
+
+Hypothesis:
+ANFace - DGFace = 0
+
+Model 1: restricted model
+Model 2: Reform.avg ~ ANFace + DGFace
+
+  Res.Df   RSS Df Sum of Sq      F Pr(&gt;F)
+1     81 157.1                           
+2     80 155.5  1     1.599 0.8226 0.3671</code></pre>
+</div>
+<div id="plots" class="section level5">
+<h5><em>PLOTS</em></h5>
+<p><img src="Thesis_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
